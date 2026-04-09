@@ -1,0 +1,144 @@
+:root {
+    --primary-color: #6366f1; 
+    --bg-dark: #0b0d11;
+    --card-bg: #1e232d; /* Un gris un poco más claro para que la tarjeta destaque */
+    --text-pure: #ffffff;
+    --text-high-contrast: #e2e8f0; /* Blanco azulado muy claro */
+    --text-gray: #94a3b8;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-high-contrast);
+    line-height: 1.6;
+}
+
+/* FORZAR VISIBILIDAD EN TEXTOS DE BOOTSTRAP */
+h1, h2, h3, h4, h5, .navbar-brand, .nav-link {
+    color: var(--text-pure) !important;
+}
+
+/* Sobreescribimos el .text-muted de Bootstrap que es muy oscuro */
+.text-muted, p, .card-text, li {
+    color: var(--text-high-contrast) !important;
+}
+
+/* Navbar */
+.backdrop-blur {
+    background-color: rgba(11, 13, 17, 0.95) !important;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.navbar-nav {
+    align-items: center;
+}
+
+.nav-link:hover {
+    color: var(--primary-color) !important;
+}
+
+/* Hero Section */
+.hero-section { padding: 50px 0; }
+.bg-primary-soft { 
+    background-color: rgba(99, 102, 241, 0.2); 
+    color: var(--primary-color) !important;
+    border: 1px solid var(--primary-color);
+}
+
+/* Tarjetas de Proyectos - Ahora con fondo sólido para evitar transparencia */
+.project-card {
+    background-color: var(--card-bg) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 12px;
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    border-color: var(--primary-color) !important;
+}
+
+/* Flickity carousel */
+.projects-flickity {
+    margin: 0 auto;
+    overflow: visible;
+    padding-bottom: 40px;
+}
+
+.projects-flickity .carousel-cell {
+    width: 85%;
+    max-width: 640px;
+    margin: 0 12px;
+}
+
+.flickity-page-dots {
+    bottom: -30px;
+}
+
+.flickity-page-dots .dot {
+    width: 10px;
+    height: 10px;
+    margin: 0 6px;
+    opacity: 1;
+    background: rgba(255, 255, 255, 0.35);
+}
+
+.flickity-page-dots .dot.is-selected {
+    background: var(--primary-color);
+}
+
+.flickity-button {
+    background: rgba(255, 255, 255, 0.08);
+    border: none;
+    width: 40px;
+    height: 40px;
+}
+
+.flickity-button:hover {
+    background: rgba(255, 255, 255, 0.16);
+}
+
+.flickity-button-icon {
+    fill: #ffffff;
+}
+
+/* Tags de Tecnología */
+.tech-tag {
+    background: rgba(99, 102, 241, 0.1);
+    color: var(--text-pure);
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: 1px solid rgba(99, 102, 241, 0.3);
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+/* Títulos de sección */
+.section-title {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 40px;
+    border-left: 5px solid var(--primary-color);
+    padding-left: 15px;
+}
+
+/* Timeline / Experiencia */
+.timeline-item {
+    border-left: 2px solid rgba(255, 255, 255, 0.1);
+    padding-left: 20px;
+    margin-left: 10px;
+    position: relative;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -7px;
+    top: 0;
+    width: 12px;
+    height: 12px;
+    background: var(--primary-color);
+    border-radius: 50%;
+}
