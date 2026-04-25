@@ -65,6 +65,8 @@ h1, h2, h3, h4, h5, .navbar-brand, .nav-link {
     margin: 0 auto;
     overflow: visible;
     padding-bottom: 40px;
+    padding-left: 60px;
+    padding-right: 60px;
 }
 
 .projects-flickity .carousel-cell {
@@ -75,6 +77,9 @@ h1, h2, h3, h4, h5, .navbar-brand, .nav-link {
 
 .flickity-page-dots {
     bottom: -30px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
 }
 
 .flickity-page-dots .dot {
@@ -94,6 +99,18 @@ h1, h2, h3, h4, h5, .navbar-brand, .nav-link {
     border: none;
     width: 40px;
     height: 40px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.flickity-button.previous {
+    left: 10px;
+}
+
+.flickity-button.next {
+    right: 10px;
 }
 
 .flickity-button:hover {
@@ -113,6 +130,19 @@ h1, h2, h3, h4, h5, .navbar-brand, .nav-link {
     border: 1px solid rgba(99, 102, 241, 0.3);
     font-size: 0.85rem;
     font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.tech-tag i {
+    font-size: 1.2rem;
+}
+
+.tech-icon {
+    width: 1.2rem;
+    height: 1.2rem;
+    object-fit: contain;
 }
 
 /* Títulos de sección */
